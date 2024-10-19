@@ -18,6 +18,14 @@ const config: Config = {
         ],
       },
       colors: {
+        // design system colors
+        beaver: 'hsl(var(--color-beaver))',
+        'cod-gray': 'hsl(var(--color-cod-gray))',
+        mirage: 'hsl(var(--color-mirage))',
+        'ebony-clay': 'hsl(var(--color-ebony-clay))',
+        'shuttle-gray': 'hsl(var(--color-shuttle-gray))',
+
+        // shadcn-ui colors
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         card: {
