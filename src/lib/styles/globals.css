@@ -66,3 +66,43 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* ------------------------------- TYPOGRAPHY ------------------------------- */
+@layer components {
+  /* Headings */
+  .text-preset-heading-xl--desktop {
+    @apply font-league-spartan text-[80px] font-light leading-[80px] tracking-[-1px];
+  }
+  .text-preset-heading-xl--tablet {
+    @apply font-league-spartan text-[48px] font-light leading-[64px] tracking-[-0.6px];
+  }
+  .text-preset-heading-xl--mobile {
+    @apply font-league-spartan text-[32px] font-light leading-[40px] tracking-[-0.4px];
+  }
+  .text-preset-heading-lg--desktop {
+    @apply font-league-spartan text-[48px] font-bold leading-[48px] tracking-[-0.5px];
+  }
+  .text-preset-heading-lg--tablet {
+    @apply font-league-spartan text-[48px] font-bold leading-[48px] tracking-[-0.5px];
+  }
+  .text-preset-heading-lg--mobile {
+    @apply font-league-spartan text-[32px] font-bold leading-[40px] tracking-[-0.4px];
+  }
+  .text-preset-heading-md {
+    @apply font-league-spartan text-[20px] font-bold leading-[24px] tracking-[-0.25px];
+  }
+  .text-preset-heading-sm {
+    @apply font-league-spartan text-[17px] font-semibold leading-[28px] tracking-[2.5px];
+  }
+
+  /* Body */
+  .text-preset-body-lg {
+    @apply font-league-spartan text-[20px] font-normal leading-[30px];
+  }
+  .text-preset-body-base {
+    @apply font-league-spartan text-[16px] font-normal leading-[26px];
+  }
+  .text-preset-body-sm {
+    @apply font-league-spartan text-[14px] font-normal leading-[28px] tracking-[2px];
+  }
+}
