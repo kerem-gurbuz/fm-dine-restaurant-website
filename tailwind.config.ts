@@ -10,7 +10,13 @@ const config: Config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    container: {
+      center: true,
+    },
     extend: {
+      screens: {
+        '2xl': '1440px',
+      },
       fontFamily: {
         'league-spartan': [
           'var(--font-league-spartan)',

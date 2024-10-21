@@ -2,21 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-/* design system colors */
+/* -------------------------------------------------------------------------- */
+/*                                   COLORS                                   */
+/* -------------------------------------------------------------------------- */
+
+/* Design System Colors */
 @layer base {
   :root {
-    /* Primary */
+    /* primary */
     --color-beaver: 27deg 22% 51%;
     --color-cod-gray: 0deg 0% 7%;
 
-    /* Secondary */
+    /* secondary */
     --color-mirage: 234deg 30% 13%;
     --color-ebony-clay: 218deg 21% 18%;
     --color-shuttle-gray: 217deg 14% 42%;
   }
 }
 
-/* shadcn-ui colors */
+/* Shadcn-UI Colors */
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -82,10 +86,12 @@
   }
 }
 
-/* ------------------------------- TYPOGRAPHY ------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                 TYPOGRAPHY                                 */
+/* -------------------------------------------------------------------------- */
 
+/* Headings */
 @layer components {
-  /* Headings */
   .text-preset-heading-xl--desktop {
     @apply font-league-spartan text-[80px] font-light leading-[80px] tracking-[-1px];
   }
@@ -110,8 +116,10 @@
   .text-preset-heading-sm {
     @apply font-league-spartan text-[17px] font-semibold leading-[28px] tracking-[2.5px];
   }
+}
 
-  /* Body */
+/* Body */
+@layer components {
   .text-preset-body-lg {
     @apply font-league-spartan text-[20px] font-normal leading-[30px];
   }
