@@ -1,25 +1,9 @@
-import Image from 'next/image';
-import Link from 'next/link';
+import { Hero } from '@/components/home-page';
 
 export default function HomePage() {
   return (
     <>
-      <header className="bg-mirage text-white">
-        <div className="container max-w-[1110px]">
-          <nav>
-            <Link href="/">
-              <Image
-                src="/assets/images/logo.svg"
-                alt="Dine Restaurant"
-                width={103}
-                height={40}
-                priority
-              />
-            </Link>
-          </nav>
-          {/* Hero content will be added in feature/homepage-hero */}
-        </div>
-      </header>
+      <Hero />
       <main id="homepage">
         <section className="text-ebony-clay">
           <div className="container max-w-[1110px]">
