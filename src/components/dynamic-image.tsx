@@ -9,7 +9,6 @@ export type DynamicImageProps = {
   className?: React.ComponentProps<'div'>['className'];
   // Image sources and settings
   images: ImageSourceMap;
-  imageAlt: string;
   placeholder?: 'blur' | 'empty';
   quality?: number;
   priority?: boolean;
@@ -19,7 +18,6 @@ export function DynamicImage({
   id,
   className,
   images: { mobile, tablet, desktop },
-  imageAlt,
   placeholder = 'blur',
   quality = 75,
   priority = false,
@@ -30,7 +28,7 @@ export function DynamicImage({
       <div className={cn('relative h-full w-full', mobile.wrapperClassName)}>
         <Image
           src={mobile.src}
-          alt={imageAlt}
+          alt={mobile.alt}
           className={cn('object-cover', mobile.className)}
           sizes={mobile.sizes}
           fill
@@ -46,7 +44,7 @@ export function DynamicImage({
       <div className={cn('relative h-full w-full', tablet.wrapperClassName)}>
         <Image
           src={tablet.src}
-          alt={imageAlt}
+          alt={tablet.alt}
           className={cn('object-cover', tablet.className)}
           sizes={tablet.sizes}
           fill
@@ -62,7 +60,7 @@ export function DynamicImage({
       <div className={cn('relative h-full w-full', desktop.wrapperClassName)}>
         <Image
           src={desktop.src}
-          alt={imageAlt}
+          alt={desktop.alt}
           className={cn('object-cover', desktop.className)}
           sizes={desktop.sizes}
           fill

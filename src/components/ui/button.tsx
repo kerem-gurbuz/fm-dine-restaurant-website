@@ -16,7 +16,7 @@ const buttonVariants = cva(
         'dine--dark':
           'border border-cod-gray font-league-spartan text-[17px] font-semibold uppercase leading-none tracking-[2.5px] text-cod-gray transition-all duration-300 ease-in-out hover:bg-cod-gray hover:text-white disabled:opacity-25 rounded-none',
         // ------------------------------------------------------------------
-        // Shadcn-UI (Preset) Buttons
+        // Shadcn-UI Presets
         default: 'bg-primary text-primary-foreground hover:bg-primary/90',
         destructive:
           'bg-destructive text-destructive-foreground hover:bg-destructive/90',

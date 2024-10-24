@@ -2,19 +2,8 @@ import Link from 'next/link';
 
 import { DynamicImage } from '@/components/dynamic-image';
 import { Button } from '@/components/ui/button';
-import {
-  HERO_BG_IMAGES,
-  HERO_BG_IMAGE_ALT,
-} from '@/lib/constants/home-page/hero';
+import { BACKGROUND_IMAGES } from '@/lib/constants/home-page/hero';
 import { Logo } from './logo';
-
-/* 
-  NOTE: z-index
-  ------------------------------------------------------------------------
-  Background Image  : z-0
-  Overlay.......... : z-10
-  Content.......... : z-20 
- */
 
 export function Hero() {
   return (
@@ -25,8 +14,7 @@ export function Hero() {
       <DynamicImage
         id="hero-background-image"
         className="absolute inset-0"
-        images={HERO_BG_IMAGES}
-        imageAlt={HERO_BG_IMAGE_ALT}
+        images={BACKGROUND_IMAGES}
         placeholder="blur"
         quality={85}
         priority={true}
@@ -38,7 +26,7 @@ export function Hero() {
         <div className="flex flex-col items-center lg:items-start">
           <nav className="mb-[36px] md:mb-[38px] lg:mb-[153px]">
             <Link href="/">
-              <Logo />
+              <Logo className="h-[32px] w-[82.4px] md:h-[40px] md:w-[103px]" />
             </Link>
           </nav>
           <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
