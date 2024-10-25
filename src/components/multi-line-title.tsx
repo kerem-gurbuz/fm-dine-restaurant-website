@@ -28,6 +28,7 @@ import React from 'react';
  */
 
 interface MultiLineTitleProps {
+  id?: string;
   title: string;
   className?: string;
   separator?: string | RegExp;
@@ -35,6 +36,7 @@ interface MultiLineTitleProps {
 }
 
 export function MultiLineTitle({
+  id,
   title,
   className,
   separator = /\n/,
@@ -52,7 +54,7 @@ export function MultiLineTitle({
   const lines = trimmedTitle.split(separator);
 
   return (
-    <Wrapper className={className}>
+    <Wrapper id={id} className={className}>
       {lines.map((line, index) => {
         const isLastLine = index === lines.length - 1;
         return (

@@ -2,14 +2,14 @@ import { cn } from '@/lib/utils';
 import { EnjoyablePlace, LocallySourced } from './features';
 
 type FeatureHighlightProps = {
-  className?: React.ComponentProps<'div'>['className'];
+  className?: React.HTMLAttributes<HTMLDivElement>['className'];
 };
 
 export function FeatureHighlight({ className }: FeatureHighlightProps) {
   return (
     <div
       className={cn(
-        'flex flex-col gap-[101px] md:gap-[118px] lg:gap-[121px]',
+        'relative z-20 flex flex-col gap-[101px] md:gap-[118px] lg:gap-[121px]',
         className,
       )}
     >

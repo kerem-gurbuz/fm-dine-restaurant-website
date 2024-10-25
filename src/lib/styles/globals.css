@@ -3,16 +3,17 @@
 @tailwind utilities;
 
 /* 
-  NOTE: z-index
-  ------------------------------------------------------------------------
+  Note: z-index
+  ---------------------------------------------------------------------------
   Hero: 
-  - background image............: z-0
-  - overlay.....................: z-10
-  - content.....................: z-20
+  - Background Image.................................................: z-0
+  - Overlay..........................................................: z-10
+  - Content..........................................................: z-20
 
   About Section:
-  - background pattern..........: z-0
-  - feature highlight component : z-20
+  - Background Patterns (<CurveTopLeft|CurveTopRight>)...............: z-0
+  - FeatureHighlight Component (<EnjoyablePlace|LocallySourced>).....: z-20
+  - LocallySourced Component Pattern (Lines).........................: z-30
  */
 
 /* -------------------------------------------------------------------------- */

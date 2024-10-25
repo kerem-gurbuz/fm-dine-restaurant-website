@@ -1,11 +1,23 @@
-export function CurveTopLeft() {
+import { cn } from '@/lib/utils';
+
+type CurveTopLeftProps = {
+  className?: React.HTMLAttributes<HTMLDivElement>['className'];
+  svgProps?: React.SVGProps<SVGSVGElement>;
+};
+
+export function CurveTopLeft({ className, svgProps }: CurveTopLeftProps) {
   return (
-    <div className="absolute bottom-0 left-1/2 right-0 hidden overflow-hidden rounded-tl-[100px] md:flex lg:left-[calc(50%-175px)]">
+    <div
+      role="presentation"
+      className={cn('overflow-hidden rounded-tl-[100px]', className)}
+    >
+      {/* SVG for the curved part, positioned at the left */}
       <svg
         xmlns="http://www.w3.org/2000/svg"
         className="shrink-0"
         width="895"
         height="320"
+        {...svgProps}
       >
         <path
           fill="#5C6779"
@@ -14,6 +26,7 @@ export function CurveTopLeft() {
           opacity=".077"
         />
       </svg>
+      {/* Div that extends to infinity towards right */}
       <div className="w-full bg-[#5C6779] opacity-[.077]" />
     </div>
   );

@@ -1,77 +1,48 @@
-import Image from 'next/image';
+import type { ImageSourceMap, ImageSourceType } from '@/lib/types/image.types';
+import { ResponsiveImage } from './responsive-image';
 
-import type { ImageSourceMap } from '@/lib/types/image.types';
-import { cn } from '@/lib/utils';
+/*
+  Note
+  ------------------------------------------------------------------------
+  Pattern: Decorative element used to add visual interest and depth to images or sections.
+ */
 
-export type DynamicImageProps = {
-  // Container settings
+type DynamicImageProps = {
   id: string;
-  className?: React.ComponentProps<'div'>['className'];
-  // Image sources and settings
+  className?: React.HTMLAttributes<HTMLDivElement>['className'];
   images: ImageSourceMap;
   placeholder?: 'blur' | 'empty';
   quality?: number;
   priority?: boolean;
+  pattern?: {
+    wrapperClassName?: React.HTMLAttributes<HTMLDivElement>['className'];
+    element: React.ReactNode;
+  };
 };
 
 export function DynamicImage({
   id,
   className,
-  images: { mobile, tablet, desktop },
+  images,
   placeholder = 'blur',
   quality = 75,
   priority = false,
+  pattern = undefined,
 }: DynamicImageProps) {
+  const breakpoints: ImageSourceType[] = ['mobile', 'tablet', 'desktop'];
+
   return (
     <div id={id} className={className}>
-      {/* Mobile Image */}
-      <div className={cn('relative h-full w-full', mobile.wrapperClassName)}>
-        <Image
-          src={mobile.src}
-          alt={mobile.alt}
-          className={cn('object-cover', mobile.className)}
-          sizes={mobile.sizes}
-          fill
+      {breakpoints.map((breakpoint) => (
+        <ResponsiveImage
+          key={breakpoint}
+          imageSource={images[breakpoint]}
           quality={quality}
           priority={priority}
           placeholder={placeholder}
-          blurDataURL={
-            placeholder === 'blur' ? mobile.src.blurDataURL : undefined
-          }
+          pattern={pattern}
         />
-      </div>
-      {/* Tablet Image */}
-      <div className={cn('relative h-full w-full', tablet.wrapperClassName)}>
-        <Image
-          src={tablet.src}
-          alt={tablet.alt}
-          className={cn('object-cover', tablet.className)}
-          sizes={tablet.sizes}
-          fill
-          quality={quality}
-          priority={priority}
-          placeholder={placeholder}
-          blurDataURL={
-            placeholder === 'blur' ? tablet.src.blurDataURL : undefined
-          }
-        />
-      </div>
-      {/* Desktop Image */}
-      <div className={cn('relative h-full w-full', desktop.wrapperClassName)}>
-        <Image
-          src={desktop.src}
-          alt={desktop.alt}
-          className={cn('object-cover', desktop.className)}
-          sizes={desktop.sizes}
-          fill
-          quality={quality}
-          priority={priority}
-          placeholder={placeholder}
-          blurDataURL={
-            placeholder === 'blur' ? desktop.src.blurDataURL : undefined
-          }
-        />
-      </div>
+      ))}
     </div>
   );
 }

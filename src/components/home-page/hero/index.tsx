@@ -27,6 +27,7 @@ export function Hero() {
           <nav className="mb-[36px] md:mb-[38px] lg:mb-[153px]">
             <Link href="/">
               <Logo className="h-[32px] w-[82.4px] md:h-[40px] md:w-[103px]" />
+              <span className="sr-only">Homepage</span>
             </Link>
           </nav>
           <div className="flex flex-col items-center text-center lg:items-start lg:text-left">

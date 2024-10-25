@@ -10,15 +10,16 @@ export function EnjoyablePlace() {
   return (
     <article
       id={enjoyablePlace.id}
+      aria-labelledby={enjoyablePlace.id + '-title'}
       className="grid grid-cols-1 gap-12 md:gap-14 lg:grid-cols-2 xl:gap-0"
     >
       <DynamicImage
         id={enjoyablePlace.id + '-image'}
         images={enjoyablePlace.images}
-        className={cn(
-          'relative z-20 mt-[-72px] md:mt-[-96px] lg:mt-[-70px]',
-          'flex justify-center lg:justify-start',
-        )}
+        className="mt-[-72px] flex justify-center md:mt-[-96px] lg:mt-[-70px] lg:justify-start"
+        placeholder="blur"
+        quality={75}
+        priority={false}
       />
       <div
         className={cn(
@@ -30,6 +31,7 @@ export function EnjoyablePlace() {
         <Divider className="mb-[36px] md:mb-[39px] lg:mb-[55px]" />
         <MultiLineTitle
           as="h2"
+          id={enjoyablePlace.id + '-title'}
           title={enjoyablePlace.title}
           className="text-preset-heading-lg--mobile md:text-preset-heading-lg--tablet lg:text-preset-heading-lg--desktop mb-[13px] md:mb-[27px]"
         />
