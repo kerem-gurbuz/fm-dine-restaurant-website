@@ -1,16 +1,11 @@
-import { Hero } from '@/components/home-page';
+import { AboutSection, Hero } from '@/components/home-page';
 
 export default function HomePage() {
   return (
     <>
       <Hero />
       <main id="homepage">
-        <section className="text-ebony-clay">
-          <div className="container max-w-[1110px]">
-            {/* About content will be added in feature/homepage-about */}
-            About Section
-          </div>
-        </section>
+        <AboutSection />
         <section className="bg-cod-gray text-white">
           <div className="container max-w-[1110px]">
             {/* Menu content will be added in feature/homepage-menu */}

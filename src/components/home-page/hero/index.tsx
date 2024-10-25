@@ -1,16 +1,9 @@
-import Image from 'next/image';
 import Link from 'next/link';
 
+import { DynamicImage } from '@/components/dynamic-image';
 import { Button } from '@/components/ui/button';
-import { BackgroundImage } from './background-image';
-
-/* 
-  NOTE: z-index
-  ------------------------------------------------------------------------
-  Background Image  : z-0
-  Overlay.......... : z-10
-  Content.......... : z-20 
- */
+import { BACKGROUND_IMAGES } from '@/lib/constants/home-page/hero';
+import { Logo } from './logo';
 
 export function Hero() {
   return (
@@ -18,21 +11,23 @@ export function Hero() {
       id="hero"
       className="relative bg-black pb-[152px] pt-[232px] text-white md:pb-[216px] md:pt-[374px] lg:pb-[198px] lg:pt-[65px]"
     >
-      <BackgroundImage className="absolute inset-0" />
+      <DynamicImage
+        id="hero-background-image"
+        className="absolute inset-0"
+        images={BACKGROUND_IMAGES}
+        placeholder="blur"
+        quality={85}
+        priority={true}
+      />
       {/* Overlay */}
-      <div className="absolute inset-x-0 bottom-0 top-[220px] z-10 bg-black md:top-[373px] lg:right-[calc(50%+175px)] lg:top-0" />
+      <div className="absolute inset-x-0 bottom-0 top-[220px] z-10 bg-black md:top-[373px] lg:right-[calc(50%-175px)] lg:top-0 xl:right-[calc(50%+175px)]" />
       {/* Content */}
-      <div className="container relative z-20 max-w-[1110px] px-6 md:px-[39.5px] xl:px-0">
+      <div className="container relative z-20 max-w-[1110px] px-6 md:px-[97.5px] xl:px-0">
         <div className="flex flex-col items-center lg:items-start">
           <nav className="mb-[36px] md:mb-[38px] lg:mb-[153px]">
             <Link href="/">
-              <Image
-                src="/assets/images/logo.svg"
-                alt="Dine restaurant logo"
-                width={103}
-                height={40}
-                priority
-              />
+              <Logo className="h-[32px] w-[82.4px] md:h-[40px] md:w-[103px]" />
+              <span className="sr-only">Homepage</span>
             </Link>
           </nav>
           <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
@@ -43,7 +38,7 @@ export function Hero() {
               Experience our seasonal menu in beautiful country surroundings.
               Eat the freshest produce from the comfort of our farmhouse.
             </p>
-            <Button variant="dine--light" size="dine-default">
+            <Button size="dine-default" variant="dine--light">
               Book a table
             </Button>
           </div>
