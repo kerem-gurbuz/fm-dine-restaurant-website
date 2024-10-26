@@ -1,7 +1,7 @@
 import { cn } from '@/lib/utils';
 
 type CurveTopLeftProps = {
-  className?: React.HTMLAttributes<HTMLDivElement>['className'];
+  className?: string;
   svgProps?: React.SVGProps<SVGSVGElement>;
 };
 

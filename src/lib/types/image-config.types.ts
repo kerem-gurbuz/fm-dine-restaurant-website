@@ -21,8 +21,8 @@ export type ImageSourceType = 'mobile' | 'tablet' | 'desktop';
 export type ImageSource = {
   src: StaticImageData;
   alt: string;
-  wrapperClassName?: React.HTMLAttributes<HTMLDivElement>['className'];
-  className?: React.HTMLAttributes<HTMLImageElement>['className'];
+  wrapperClassName?: string;
+  className?: string;
   sizes: string;
 };
 

@@ -1,8 +1,8 @@
 import { DynamicImage } from '@/components/dynamic-image';
 import { MultiLineTitle } from '@/components/multi-line-title';
+import { Divider, Lines } from '@/components/patterns';
 import { RESTAURANT_FEATURES } from '@/lib/constants/home-page/about-section';
 import { cn } from '@/lib/utils';
-import { Divider, Lines } from '../patterns';
 
 const locallySourced = RESTAURANT_FEATURES['locally-sourced'];
 
@@ -10,12 +10,12 @@ export function LocallySourced() {
   return (
     <article
       id={locallySourced.id}
-      aria-labelledby={locallySourced.id + '-title'}
+      aria-labelledby={locallySourced.id + '-heading'}
       className="grid grid-cols-1 gap-12 md:gap-14 lg:grid-cols-2 xl:gap-0"
     >
       <DynamicImage
         id={locallySourced.id + '-image'}
-        images={locallySourced.images}
+        imageConfig={locallySourced.imageConfig}
         className="flex justify-center lg:order-last lg:mb-[-80px] lg:justify-end"
         placeholder="blur"
         quality={75}
@@ -36,7 +36,7 @@ export function LocallySourced() {
         <Divider className="mb-[36px] md:mb-[39px] lg:mb-[55px]" />
         <MultiLineTitle
           as="h2"
-          id={locallySourced.id + '-title'}
+          id={locallySourced.id + '-heading'}
           title={locallySourced.title}
           className="text-preset-heading-lg--mobile md:text-preset-heading-lg--tablet lg:text-preset-heading-lg--desktop mb-[13px] md:mb-[27px]"
         />

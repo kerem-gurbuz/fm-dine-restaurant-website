@@ -1,13 +1,7 @@
 import Image from 'next/image';
 
-import type { ImageSource } from '@/lib/types/image.types';
+import type { ImageSource } from '@/lib/types/image-config.types';
 import { cn } from '@/lib/utils';
-
-/*
-  Note
-  ------------------------------------------------------------------------
-  Pattern: Decorative element used to add visual interest and depth to images or sections.
- */
 
 type ResponsiveImageProps = {
   imageSource: ImageSource;
@@ -15,7 +9,7 @@ type ResponsiveImageProps = {
   priority: boolean;
   placeholder: 'blur' | 'empty';
   pattern?: {
-    wrapperClassName?: React.HTMLAttributes<HTMLDivElement>['className'];
+    wrapperClassName?: string;
     element: React.ReactNode;
   };
 };
@@ -28,7 +22,9 @@ export function ResponsiveImage({
   pattern,
 }: ResponsiveImageProps) {
   return (
-    <div className={cn('relative h-full w-full', imageSource.wrapperClassName)}>
+    <figure
+      className={cn('relative h-full w-full', imageSource.wrapperClassName)}
+    >
       <Image
         src={imageSource.src}
         alt={imageSource.alt}
@@ -45,6 +41,6 @@ export function ResponsiveImage({
       {pattern && (
         <div className={pattern.wrapperClassName}>{pattern.element}</div>
       )}
-    </div>
+    </figure>
   );
 }
