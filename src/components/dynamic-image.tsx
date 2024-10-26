@@ -1,4 +1,7 @@
-import type { ImageSourceMap, ImageSourceType } from '@/lib/types/image.types';
+import type {
+  ImageSourceMap,
+  ImageSourceType,
+} from '@/lib/types/image-config.types';
 import { ResponsiveImage } from './responsive-image';
 
 /*
@@ -9,13 +12,13 @@ import { ResponsiveImage } from './responsive-image';
 
 type DynamicImageProps = {
   id: string;
-  className?: React.HTMLAttributes<HTMLDivElement>['className'];
-  images: ImageSourceMap;
+  className?: string;
+  imageConfig: ImageSourceMap;
   placeholder?: 'blur' | 'empty';
   quality?: number;
   priority?: boolean;
   pattern?: {
-    wrapperClassName?: React.HTMLAttributes<HTMLDivElement>['className'];
+    wrapperClassName?: string;
     element: React.ReactNode;
   };
 };
@@ -23,7 +26,7 @@ type DynamicImageProps = {
 export function DynamicImage({
   id,
   className,
-  images,
+  imageConfig,
   placeholder = 'blur',
   quality = 75,
   priority = false,
@@ -36,7 +39,7 @@ export function DynamicImage({
       {breakpoints.map((breakpoint) => (
         <ResponsiveImage
           key={breakpoint}
-          imageSource={images[breakpoint]}
+          imageSource={imageConfig[breakpoint]}
           quality={quality}
           priority={priority}
           placeholder={placeholder}

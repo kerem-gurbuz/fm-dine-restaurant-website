@@ -24,11 +24,11 @@ const enjoyablePlace: Feature = {
   title: 'Enjoyable place\nfor all the family',
   description:
     'Our relaxed surroundings make dining with us a great experience for everyone. We can even arrange a tour of the farm before your meal.',
-  images: {
+  imageConfig: {
     mobile: {
       src: enjoyablePlaceMobile,
       alt: enjoyablePlaceImageAlt,
-      wrapperClassName: 'shadow-dine h-[400px] max-w-[327px] md:hidden',
+      wrapperClassName: 'block h-[400px] max-w-[327px] shadow-dine md:hidden',
       className: 'object-center',
       sizes: '327px',
     },
@@ -36,14 +36,14 @@ const enjoyablePlace: Feature = {
       src: enjoyablePlaceTablet,
       alt: enjoyablePlaceImageAlt,
       wrapperClassName:
-        'shadow-dine hidden h-[360px] max-w-[573px] md:block lg:hidden',
+        'hidden h-[360px] max-w-[573px] shadow-dine md:block lg:hidden',
       className: 'object-center',
       sizes: '573px',
     },
     desktop: {
       src: enjoyablePlaceDesktop,
       alt: enjoyablePlaceImageAlt,
-      wrapperClassName: 'shadow-dine hidden h-[720px] max-w-[540px] lg:block',
+      wrapperClassName: 'hidden h-[720px] max-w-[540px] shadow-dine lg:block',
       className: 'object-center',
       sizes: '540px',
     },
@@ -62,11 +62,11 @@ const locallySourced: Feature = {
   title: 'The most locally\nsourced food',
   description:
     "All our ingredients come directly from our farm or local fishery. So you can be sure that you're eating the freshest, most sustainable food.",
-  images: {
+  imageConfig: {
     mobile: {
       src: locallySourcedMobile,
       alt: locallySourcedImageAlt,
-      wrapperClassName: 'shadow-dine h-[400px] max-w-[327px] md:hidden',
+      wrapperClassName: 'block h-[400px] max-w-[327px] shadow-dine md:hidden',
       className: 'object-center',
       sizes: '327px',
     },
@@ -74,14 +74,14 @@ const locallySourced: Feature = {
       src: locallySourcedTablet,
       alt: locallySourcedImageAlt,
       wrapperClassName:
-        'shadow-dine hidden h-[360px] max-w-[573px] md:block lg:hidden',
+        'hidden h-[360px] max-w-[573px] shadow-dine md:block lg:hidden',
       className: 'object-center',
       sizes: '573px',
     },
     desktop: {
       src: locallySourcedDesktop,
       alt: locallySourcedImageAlt,
-      wrapperClassName: 'shadow-dine hidden h-[720px] max-w-[540px] lg:block',
+      wrapperClassName: 'hidden h-[720px] max-w-[540px] shadow-dine lg:block',
       className: 'object-center',
       sizes: '540px',
     },

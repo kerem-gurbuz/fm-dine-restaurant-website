@@ -6,14 +6,14 @@
   Note: z-index
   ---------------------------------------------------------------------------
   Hero: 
-  - Background Image.................................................: z-0
+  - Background Image.................................................: -
   - Overlay..........................................................: z-10
   - Content..........................................................: z-20
 
   About Section:
-  - Background Patterns (<CurveTopLeft|CurveTopRight>)...............: z-0
-  - FeatureHighlight Component (<EnjoyablePlace|LocallySourced>).....: z-20
-  - LocallySourced Component Pattern (Lines).........................: z-30
+  - CurveTopLeft & CurveTopRight (Background) Patterns...............: -
+  - EnjoyablePlace & LocallySourced (Feature Highlight) Components...: z-20
+  - Lines (Decorative) Pattern.......................................: z-30
  */
 
 /* -------------------------------------------------------------------------- */
