@@ -1,4 +1,4 @@
-export { AboutSection } from './about';
-export { EventsSection } from './events';
-export { Hero } from './hero';
-export { MenuSection } from './menu';
+export { AboutSection } from './about-section';
+export { EventsSection } from './events-section';
+export { HeroSection } from './hero-section';
+export { MenuSection } from './menu-section';

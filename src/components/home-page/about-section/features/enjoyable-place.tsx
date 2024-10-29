@@ -11,7 +11,7 @@ export function EnjoyablePlace() {
     <article
       id={enjoyablePlace.id}
       aria-labelledby={enjoyablePlace.id + '-heading'}
-      className="grid grid-cols-1 gap-12 md:gap-14 lg:grid-cols-2 xl:gap-0"
+      className="grid grid-cols-1 gap-12 md:gap-[55px] lg:grid-cols-2 xl:gap-0"
     >
       <DynamicImage
         id={enjoyablePlace.id + '-image'}

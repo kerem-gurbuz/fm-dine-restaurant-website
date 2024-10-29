@@ -5,10 +5,10 @@ import { DynamicImage } from '@/components/dynamic-image';
 import { Button } from '@/components/ui/button';
 import { BACKGROUND_IMAGE_CONFIG } from '@/lib/constants/home-page/hero';
 
-export function Hero() {
+export function HeroSection() {
   return (
     <header
-      id="hero"
+      id="hero-section"
       aria-labelledby="hero-heading"
       className="relative bg-black pb-[152px] pt-[232px] text-white md:pb-[216px] md:pt-[374px] lg:pb-[198px] lg:pt-[65px]"
     >

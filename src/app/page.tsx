@@ -1,14 +1,14 @@
 import {
   AboutSection,
   EventsSection,
-  Hero,
+  HeroSection,
   MenuSection,
 } from '@/components/home-page';
 
 export default function HomePage() {
   return (
     <>
-      <Hero />
+      <HeroSection />
       <main id="homepage">
         <AboutSection />
         <MenuSection />
