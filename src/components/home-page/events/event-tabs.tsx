@@ -1,7 +1,7 @@
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { EVENT_TABS } from '@/lib/constants/home-page/events-section';
 import { cn } from '@/lib/utils';
-// import { EventTab } from './event-tab';
+import { EventTab } from './event-tab';
 
 const DEFAULT_TAB = EVENT_TABS[0];
 
@@ -39,14 +39,13 @@ export function EventTabs() {
           </TabsTrigger>
         ))}
       </TabsList>
-      {/* TODO: Integrate EventTab component */}
-      {/* {EVENT_TABS.map((eventTab) => (
+      {EVENT_TABS.map((eventTab) => (
         <EventTab
           key={eventTab.value}
           value={eventTab.value}
           event={eventTab.event}
         />
-      ))} */}
+      ))}
     </Tabs>
   );
 }
