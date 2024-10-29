@@ -31,6 +31,10 @@ const config: Config = {
         'ebony-clay': 'hsl(var(--color-ebony-clay))',
         'shuttle-gray': 'hsl(var(--color-shuttle-gray))',
 
+        // additional colors
+        'dark-gray': 'hsl(var(--color-dark-gray))',
+        'steel-gray': 'hsl(var(--color-steel-gray))',
+
         // shadcn-ui colors
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
@@ -79,7 +83,7 @@ const config: Config = {
         sm: 'calc(var(--radius) - 4px)',
       },
       boxShadow: {
-        dine: '0 75px 100px -50px rgba(56, 66, 85, 0.5)',
+        dine: '0 75px 100px -50px hsl(var(--color-steel-gray) / 0.5)',
       },
     },
   },
