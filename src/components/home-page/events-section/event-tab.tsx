@@ -2,7 +2,7 @@ import { DynamicImage } from '@/components/dynamic-image';
 import { Lines } from '@/components/patterns';
 import { Button } from '@/components/ui/button';
 import { TabsContent } from '@/components/ui/tabs';
-import type { Event, EventType } from '@/lib/types/dine-restaurant';
+import type { Event, EventType } from '@/lib/types/home-page';
 import { cn } from '@/lib/utils';
 
 type EventTabProps = {

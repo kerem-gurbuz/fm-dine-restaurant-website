@@ -1,5 +1,5 @@
 import { DynamicImage } from '@/components/dynamic-image';
-import type { MenuItem } from '@/lib/types/dine-restaurant';
+import type { MenuItem } from '@/lib/types/home-page';
 import { cn } from '@/lib/utils';
 
 type MenuItemProps = {

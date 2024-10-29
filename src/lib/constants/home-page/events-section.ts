@@ -6,7 +6,7 @@ import {
   type Event,
   type EventTab,
   EventType,
-} from '@/lib/types/dine-restaurant/events-section.types';
+} from '@/lib/types/home-page/events-section.types';
 
 import familyGatheringDesktop from '/public/assets/images/homepage/family-gathering-desktop@2x.jpg';
 import familyGatheringMobile from '/public/assets/images/homepage/family-gathering-mobile@2x.jpg';

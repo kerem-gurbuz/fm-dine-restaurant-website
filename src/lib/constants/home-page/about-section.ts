@@ -2,7 +2,7 @@
 /*                           About Section Constants                          */
 /* -------------------------------------------------------------------------- */
 
-import type { Feature, FeatureMap } from '@/lib/types/dine-restaurant';
+import type { Feature, FeatureMap } from '@/lib/types/home-page';
 
 import enjoyablePlaceDesktop from '/public/assets/images/homepage/enjoyable-place-desktop@2x.jpg';
 import enjoyablePlaceMobile from '/public/assets/images/homepage/enjoyable-place-mobile@2x.jpg';
