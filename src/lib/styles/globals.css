@@ -14,6 +14,12 @@
   - CurveTopLeft & CurveTopRight (Background) Patterns...............: -
   - EnjoyablePlace & LocallySourced (Feature Highlight) Components...: z-20
   - Lines (Decorative) Pattern.......................................: z-30
+  
+  Events Section:
+  - CurveTopRight Pattern............................................: -
+  - EventTabs Component..............................................: z-10
+  - TabsList Component...............................................: z-20
+  - Lines (Decorative) Pattern.......................................: z-20
  */
 
 /* -------------------------------------------------------------------------- */
@@ -31,6 +37,10 @@
     --color-mirage: 234deg 30% 13%;
     --color-ebony-clay: 218deg 21% 18%;
     --color-shuttle-gray: 217deg 14% 42%;
+
+    /* tertiary */
+    --color-dark-gray: 0deg 0% 30%;
+    --color-steel-gray: 219deg 20% 28%;
   }
 }
 

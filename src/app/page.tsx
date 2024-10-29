@@ -1,4 +1,9 @@
-import { AboutSection, Hero, MenuSection } from '@/components/home-page';
+import {
+  AboutSection,
+  EventsSection,
+  Hero,
+  MenuSection,
+} from '@/components/home-page';
 
 export default function HomePage() {
   return (
@@ -7,12 +12,7 @@ export default function HomePage() {
       <main id="homepage">
         <AboutSection />
         <MenuSection />
-        <section className="text-ebony-clay">
-          <div className="container max-w-[1110px]">
-            {/* Events content will be added in feature/homepage-events */}
-            Events Section
-          </div>
-        </section>
+        <EventsSection />
         <section className="text-white">
           <div className="container max-w-[1110px]">
             {/* Booking CTA content will be added in feature/homepage-cta */}
