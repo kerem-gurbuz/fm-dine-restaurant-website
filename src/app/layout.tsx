@@ -1,3 +1,4 @@
+import { Footer } from '@/components/layout/footer';
 import { league_spartan } from '@/lib/styles/fonts';
 import '@/lib/styles/globals.css';
 import type { Metadata } from 'next';
@@ -18,12 +19,7 @@ export default function RootLayout({
         className={`${league_spartan.variable} font-league-spartan antialiased`}
       >
         {children}
-        <footer className="bg-cod-gray text-white">
-          <div className="container max-w-[1110px]">
-            {/* Footer content will be added in feature/footer */}
-            Footer
-          </div>
-        </footer>
+        <Footer />
       </body>
     </html>
   );
