@@ -1,5 +1,7 @@
 import { z } from 'zod';
 
+export const MAX_GUESTS = 8; // TODO: Get this from API
+
 /*
   Name Schema
   ------------------------------------------------------------------------
@@ -54,7 +56,7 @@ const dateSchema = z
     },
     {
       message: 'This field is incomplete',
-      path: ['date'], // This will make the error appear at the date group level
+      path: ['dateGroup'], // This will make the error appear at the date group level
     },
   )
   .refine(
@@ -76,7 +78,7 @@ const dateSchema = z
     },
     {
       message: 'Please enter a valid date',
-      path: ['date'],
+      path: ['dateGroup'],
     },
   );
 
@@ -116,7 +118,7 @@ const timeSchema = z
     },
     {
       message: 'This field is incomplete',
-      path: ['time'], // This will make the error appear at the time group level
+      path: ['timeGroup'], // This will make the error appear at the time group level
     },
   )
   .refine(
@@ -137,7 +139,7 @@ const timeSchema = z
     },
     {
       message: 'Please enter a valid time',
-      path: ['time'],
+      path: ['timeGroup'],
     },
   );
 
@@ -148,7 +150,7 @@ const timeSchema = z
 const guestsSchema = z
   .number()
   .min(1, { message: 'Minimum 1 guest required' })
-  .max(8, { message: 'Maximum 8 guests allowed' });
+  .max(MAX_GUESTS, { message: `Maximum ${MAX_GUESTS} guests allowed` });
 
 /* 
   Booking Form Schema

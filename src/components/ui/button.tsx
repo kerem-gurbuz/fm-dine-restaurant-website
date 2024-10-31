@@ -5,16 +5,17 @@ import * as React from 'react';
 import { cn } from '@/lib/utils';
 
 const buttonVariants = cva(
-  'inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0',
+  // 'inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0',
+  'inline-flex items-center justify-center whitespace-nowrap ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0',
   {
     variants: {
       variant: {
         // ------------------------------------------------------------------
         // Dine Buttons
         'dine--light':
-          'border border-white font-league-spartan text-[17px] font-semibold uppercase leading-none tracking-[2.5px] text-white transition-all duration-300 ease-in-out hover:bg-white hover:text-cod-gray disabled:opacity-25 rounded-none',
+          'border border-white font-league-spartan text-[17px] font-semibold uppercase leading-none tracking-[2.5px] text-white transition-all duration-300 ease-in-out hover:bg-white hover:text-cod-gray disabled:opacity-25',
         'dine--dark':
-          'border border-cod-gray font-league-spartan text-[17px] font-semibold uppercase leading-none tracking-[2.5px] text-cod-gray transition-all duration-300 ease-in-out hover:bg-cod-gray hover:text-white disabled:opacity-25 rounded-none',
+          'border border-cod-gray font-league-spartan text-[17px] font-semibold uppercase leading-none tracking-[2.5px] text-cod-gray transition-all duration-300 ease-in-out hover:bg-cod-gray hover:text-white disabled:opacity-25',
         // ------------------------------------------------------------------
         // Shadcn-UI Presets
         default: 'bg-primary text-primary-foreground hover:bg-primary/90',
