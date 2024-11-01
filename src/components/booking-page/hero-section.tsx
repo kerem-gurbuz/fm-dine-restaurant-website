@@ -5,7 +5,11 @@ import { DynamicImage } from '@/components/dynamic-image';
 import { Button } from '@/components/ui/button';
 import { BACKGROUND_IMAGE_CONFIG } from '@/lib/constants/booking-page/hero';
 
-export function HeroSection() {
+type HeroSectionProps = {
+  onScrollToBooking: () => void;
+};
+
+export function HeroSection({ onScrollToBooking }: HeroSectionProps) {
   return (
     <header
       id="hero-section"
@@ -46,6 +50,7 @@ export function HeroSection() {
               size="dine-default"
               variant="dine--light"
               className="md:hidden"
+              onClick={onScrollToBooking}
             >
               Reserve Place
             </Button>
