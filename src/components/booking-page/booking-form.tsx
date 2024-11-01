@@ -65,6 +65,7 @@ export function BookingForm({ className }: BookingFormProps) {
         id="booking-form"
         onSubmit={form.handleSubmit(onSubmit)}
         className={cn(
+          'bg-white text-cod-gray shadow-dine',
           'space-y-[34px] p-8 pt-[34px] md:p-12 md:pt-[50px]',
           className,
         )}
@@ -102,16 +103,13 @@ export function BookingForm({ className }: BookingFormProps) {
         {/* Date Fields */}
         <div className="flex flex-col gap-2 md:flex-row md:gap-[65px]">
           {/* Date Group Label */}
-          <div className="text-left font-league-spartan">
+          <div className="text-left">
             <p
               aria-label="date-group-label"
-              className={cn(
-                'font-league-spartan text-[20px] font-normal leading-[28px] text-cod-gray',
-                {
-                  'text-dusty-rose':
-                    errors.date?.day || errors.date?.month || errors.date?.year,
-                },
-              )}
+              className={cn('text-[20px] font-normal leading-[28px]', {
+                'text-dusty-rose':
+                  errors.date?.day || errors.date?.month || errors.date?.year,
+              })}
             >
               Pick a date
             </p>
@@ -121,22 +119,27 @@ export function BookingForm({ className }: BookingFormProps) {
               (errors.date?.day || errors.date?.month || errors.date?.year) && (
                 <p
                   aria-label="date-group-message"
-                  className="text-dusty-rose hidden text-[10px] font-medium leading-[10px] tracking-[-0.13px] md:block"
+                  className="hidden text-[10px] font-medium leading-[10px] tracking-[-0.13px] text-dusty-rose md:block"
                 >
                   {(errors.date.dateGroup as { message: string }).message}
                 </p>
               )}
           </div>
-          <div className="grid flex-1 grid-cols-[1fr_1fr_minmax(88px,1fr)] gap-[14px] md:gap-[16px]">
+          <div className="grid flex-1 grid-cols-[1fr_1fr_minmax(88px,1fr)] gap-[14px] md:grid-cols-[1fr_1fr_minmax(97px,1fr)] md:gap-[16px]">
             <FormField
               control={form.control}
               name="date.month"
               render={({ field }) => (
                 <FormItem>
                   <FormControl>
-                    <Input placeholder="MM" maxLength={2} {...field} />
+                    <Input
+                      placeholder="MM"
+                      maxLength={2}
+                      autoComplete="off"
+                      {...field}
+                    />
                   </FormControl>
-                  <FormMessage className="pl-4 pt-3" />
+                  <FormMessage className="pt-3" />
                 </FormItem>
               )}
             />
@@ -146,9 +149,14 @@ export function BookingForm({ className }: BookingFormProps) {
               render={({ field }) => (
                 <FormItem>
                   <FormControl>
-                    <Input placeholder="DD" maxLength={2} {...field} />
+                    <Input
+                      placeholder="DD"
+                      maxLength={2}
+                      autoComplete="off"
+                      {...field}
+                    />
                   </FormControl>
-                  <FormMessage className="pl-4 pt-3" />
+                  <FormMessage className="pt-3" />
                 </FormItem>
               )}
             />
@@ -158,9 +166,14 @@ export function BookingForm({ className }: BookingFormProps) {
               render={({ field }) => (
                 <FormItem>
                   <FormControl>
-                    <Input placeholder="YYYY" maxLength={4} {...field} />
+                    <Input
+                      placeholder="YYYY"
+                      maxLength={4}
+                      autoComplete="off"
+                      {...field}
+                    />
                   </FormControl>
-                  <FormMessage className="pl-4 pt-3" />
+                  <FormMessage className="pt-3" />
                 </FormItem>
               )}
             />
@@ -170,18 +183,15 @@ export function BookingForm({ className }: BookingFormProps) {
         {/* Time Fields */}
         <div className="flex flex-col gap-2 md:flex-row md:gap-[65px]">
           {/* Time Group Label */}
-          <div className="text-left font-league-spartan">
+          <div className="text-left">
             <p
               aria-label="time-group-label"
-              className={cn(
-                'font-league-spartan text-[20px] font-normal leading-[28px] text-cod-gray',
-                {
-                  'text-dusty-rose':
-                    errors.time?.hour ||
-                    errors.time?.minute ||
-                    errors.time?.period,
-                },
-              )}
+              className={cn('text-[20px] font-normal leading-[28px]', {
+                'text-dusty-rose':
+                  errors.time?.hour ||
+                  errors.time?.minute ||
+                  errors.time?.period,
+              })}
             >
               Pick a time
             </p>
@@ -193,22 +203,27 @@ export function BookingForm({ className }: BookingFormProps) {
                 errors.time?.period) && (
                 <p
                   aria-label="time-group-message"
-                  className="text-dusty-rose hidden text-[10px] font-medium leading-[10px] tracking-[-0.13px] md:block"
+                  className="hidden text-[10px] font-medium leading-[10px] tracking-[-0.13px] text-dusty-rose md:block"
                 >
                   {(errors.time.timeGroup as { message: string }).message}
                 </p>
               )}
           </div>
-          <div className="grid flex-1 grid-cols-[1fr_1fr_minmax(88px,1fr)] gap-[14px] md:gap-[16px]">
+          <div className="grid flex-1 grid-cols-[1fr_1fr_minmax(88px,1fr)] gap-[14px] md:grid-cols-[1fr_1fr_minmax(97px,1fr)] md:gap-[16px]">
             <FormField
               control={form.control}
               name="time.hour"
               render={({ field }) => (
                 <FormItem>
                   <FormControl>
-                    <Input placeholder="09" maxLength={2} {...field} />
+                    <Input
+                      placeholder="09"
+                      maxLength={2}
+                      autoComplete="off"
+                      {...field}
+                    />
                   </FormControl>
-                  <FormMessage className="pl-4 pt-3" />
+                  <FormMessage className="pt-3" />
                 </FormItem>
               )}
             />
@@ -218,9 +233,14 @@ export function BookingForm({ className }: BookingFormProps) {
               render={({ field }) => (
                 <FormItem>
                   <FormControl>
-                    <Input placeholder="00" maxLength={2} {...field} />
+                    <Input
+                      placeholder="00"
+                      maxLength={2}
+                      autoComplete="off"
+                      {...field}
+                    />
                   </FormControl>
-                  <FormMessage className="pl-4 pt-3" />
+                  <FormMessage className="pt-3" />
                 </FormItem>
               )}
             />
@@ -234,7 +254,7 @@ export function BookingForm({ className }: BookingFormProps) {
                     defaultValue={field.value}
                   >
                     <FormControl>
-                      <SelectTrigger>
+                      <SelectTrigger aria-label="Select time period">
                         <SelectValue placeholder="AM" />
                       </SelectTrigger>
                     </FormControl>
@@ -243,7 +263,7 @@ export function BookingForm({ className }: BookingFormProps) {
                       <SelectItem value="PM">PM</SelectItem>
                     </SelectContent>
                   </Select>
-                  <FormMessage className="pl-4 pt-3" />
+                  <FormMessage className="pt-3" />
                 </FormItem>
               )}
             />
@@ -251,41 +271,45 @@ export function BookingForm({ className }: BookingFormProps) {
         </div>
         {/* ---------------------------------------------------------------- */}
         {/* Guests Field */}
-        <div className="flex h-[41px] justify-between border-b border-cod-gray/50 pb-[17px] font-league-spartan text-[20px] font-bold leading-[24px] text-cod-gray hover:border-cod-gray focus-visible:outline-none">
+        <div className="h-[41px] border-b border-cod-gray/50 pb-[17px] text-[20px] font-bold leading-[24px] hover:border-cod-gray focus-visible:outline-none">
           <p aria-label="guests-label" className="sr-only">
             Number of guests
           </p>
-          <Button
-            type="button"
-            variant="ghost"
-            className="h-6 w-6 px-6"
-            disabled={form.watch('guests') === 1}
-            onClick={() => {
-              const currentGuests = form.getValues('guests');
-              if (currentGuests > 1) {
-                form.setValue('guests', currentGuests - 1);
-              }
-            }}
-          >
-            <MinusIcon />
-          </Button>
-          <span className="font-league-spartan text-[20px] font-bold leading-[24px] tracking-[-0.25px]">
-            {form.watch('guests')} people
-          </span>
-          <Button
-            type="button"
-            variant="ghost"
-            className="h-6 w-6 px-6"
-            disabled={form.watch('guests') === MAX_GUESTS}
-            onClick={() => {
-              const currentGuests = form.getValues('guests');
-              if (currentGuests < MAX_GUESTS) {
-                form.setValue('guests', currentGuests + 1);
-              }
-            }}
-          >
-            <PlusIcon />
-          </Button>
+          <div className="flex justify-between">
+            <Button
+              aria-label="Remove guests"
+              type="button"
+              variant="ghost"
+              className="h-6 w-6 px-6"
+              disabled={form.watch('guests') === 1}
+              onClick={() => {
+                const currentGuests = form.getValues('guests');
+                if (currentGuests > 1) {
+                  form.setValue('guests', currentGuests - 1);
+                }
+              }}
+            >
+              <MinusIcon />
+            </Button>
+            <span className="text-[20px] font-bold leading-[24px] tracking-[-0.25px]">
+              {form.watch('guests')} people
+            </span>
+            <Button
+              aria-label="Add guests"
+              type="button"
+              variant="ghost"
+              className="h-6 w-6 px-6"
+              disabled={form.watch('guests') === MAX_GUESTS}
+              onClick={() => {
+                const currentGuests = form.getValues('guests');
+                if (currentGuests < MAX_GUESTS) {
+                  form.setValue('guests', currentGuests + 1);
+                }
+              }}
+            >
+              <PlusIcon />
+            </Button>
+          </div>
         </div>
         {/* ---------------------------------------------------------------- */}
         {/* Submit Button */}
