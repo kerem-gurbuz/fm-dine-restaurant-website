@@ -163,5 +163,3 @@ export const bookingFormSchema = z.object({
   time: timeSchema,
   guests: guestsSchema,
 });
-
-export type BookingFormData = z.infer<typeof bookingFormSchema>;

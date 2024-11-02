@@ -21,18 +21,25 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
+import { useToast } from '@/lib/hooks';
 import {
   bookingFormSchema,
   MAX_GUESTS,
-  type BookingFormData,
 } from '@/lib/schemas/booking-form.schema';
-import { cn } from '@/lib/utils';
+import type { BookingFormData } from '@/lib/types/booking-page';
+import {
+  cn,
+  generateBookingErrorMessage,
+  generateBookingSuccessMessage,
+} from '@/lib/utils';
 
 type BookingFormProps = {
   className?: string;
 };
 
 export function BookingForm({ className }: BookingFormProps) {
+  const { toast } = useToast();
+
   const form = useForm<BookingFormData>({
     resolver: zodResolver(bookingFormSchema),
     defaultValues: {
@@ -52,10 +59,14 @@ export function BookingForm({ className }: BookingFormProps) {
       console.log('Form data:', data);
       // Simulate API call
       await new Promise((resolve) => setTimeout(resolve, 2000));
+      // Show success toast
+      toast(generateBookingSuccessMessage(data));
       // Reset form after successful submission
       form.reset();
     } catch (error) {
       console.error('Error submitting form:', error);
+      // Show error toast
+      toast(generateBookingErrorMessage(error, data));
     }
   };
 

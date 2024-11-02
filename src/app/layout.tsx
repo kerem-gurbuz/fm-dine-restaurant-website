@@ -1,7 +1,9 @@
+import type { Metadata } from 'next';
+
 import { Footer } from '@/components/layout/footer';
 import { league_spartan } from '@/lib/styles/fonts';
+import { Toaster } from '@/components/ui/toaster';
 import '@/lib/styles/globals.css';
-import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Dine Restaurant',
@@ -20,6 +22,7 @@ export default function RootLayout({
       >
         {children}
         <Footer />
+        <Toaster />
       </body>
     </html>
   );
