@@ -34,6 +34,7 @@ const config: Config = {
         // additional colors
         'dark-gray': 'hsl(var(--color-dark-gray))',
         'steel-gray': 'hsl(var(--color-steel-gray))',
+        'dusty-rose': 'hsl(var(--color-dusty-rose))',
 
         // shadcn-ui colors
         background: 'hsl(var(--background))',
@@ -84,6 +85,7 @@ const config: Config = {
       },
       boxShadow: {
         dine: '0 75px 100px -50px hsl(var(--color-steel-gray) / 0.5)',
+        'dine-sm': '0 15px 25px 0 hsl(var(--color-steel-gray) / 0.25)',
       },
     },
   },
