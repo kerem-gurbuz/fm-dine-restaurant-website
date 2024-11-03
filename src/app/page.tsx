@@ -4,7 +4,7 @@ import {
   EventsSection,
   HeroSection,
   MenuSection,
-} from '@/components/home-page';
+} from '@/components/pages/home';
 
 export default function HomePage() {
   return (

@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import { useCallback } from 'react';
 
 /**
  * ScrollBehavior type defines how the scroll animation should be performed
@@ -26,7 +26,7 @@ type ScrollInline = 'start' | 'center' | 'end' | 'nearest';
 /**
  * Configuration options for the scroll behavior
  */
-interface ScrollOptions {
+type ScrollOptions = {
   /**
    * Defines the transition animation of the scroll
    * @default 'smooth'
@@ -44,7 +44,7 @@ interface ScrollOptions {
    * @default 'nearest'
    */
   inline?: ScrollInline;
-}
+};
 
 /**
  * Default scroll configuration

@@ -1,0 +1,1 @@
+export { HERO_SECTION_BACKGROUND_IMAGE_CONFIG } from './hero';

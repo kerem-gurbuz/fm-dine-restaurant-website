@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
-import { Footer } from '@/components/layout/footer';
-import { league_spartan } from '@/lib/styles/fonts';
+import { Footer } from '@/components/layout';
 import { Toaster } from '@/components/ui/toaster';
+import { league_spartan } from '@/lib/styles/fonts';
 import '@/lib/styles/globals.css';
 
 export const metadata: Metadata = {
