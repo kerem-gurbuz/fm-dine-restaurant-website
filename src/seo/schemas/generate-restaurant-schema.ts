@@ -30,8 +30,10 @@ export const generateRestaurantSchema = (
       latitude: '54.323577', // Add actual coordinates
       longitude: '-2.528321', // Add actual coordinates
     },
+    hasMap: 'https://maps.app.goo.gl/JjAXCJoLfAvEymX97', // Add Google Maps URL
     servesCuisine: ['British', 'Contemporary', 'Seasonal'], // Adjust as needed
     priceRange: '£££', // Adjust as needed
+    acceptsReservations: `${SITE_CONFIG.siteUrl}/booking`,
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',
@@ -46,8 +48,5 @@ export const generateRestaurantSchema = (
         closes: SITE_CONFIG.openingHours.weekend.slice(6),
       },
     ],
-    acceptsReservations: `${SITE_CONFIG.siteUrl}/booking`,
-    hasMenu: `${SITE_CONFIG.siteUrl}`,
-    hasMap: 'https://maps.app.goo.gl/JjAXCJoLfAvEymX97', // Add Google Maps URL
   };
 };
