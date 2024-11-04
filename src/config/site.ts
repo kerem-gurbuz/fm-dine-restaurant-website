@@ -1,6 +1,6 @@
 import { env } from './env';
 
-export const siteConfig = {
+export const SITE_CONFIG = {
   siteName: 'Dine Restaurant',
   siteUrl: env.SITE_URL,
   description:
