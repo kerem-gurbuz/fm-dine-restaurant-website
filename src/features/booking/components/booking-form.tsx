@@ -260,6 +260,7 @@ export function BookingForm({ className }: BookingFormProps) {
               render={({ field }) => (
                 <FormItem>
                   <Select
+                    name="time-period"
                     onValueChange={field.onChange}
                     defaultValue={field.value}
                   >
