@@ -9,7 +9,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      className="scrollbar-thin scrollbar-thumb-beaver scrollbar-track-black"
+    >
       <body
         className={`${league_spartan.variable} font-league-spartan antialiased`}
       >
