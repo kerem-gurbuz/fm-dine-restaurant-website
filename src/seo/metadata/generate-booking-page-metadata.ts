@@ -24,7 +24,7 @@ export const generateBookingPageMetadata = (): Metadata => ({
     siteName: 'Dine Restaurant',
     images: [
       {
-        url: '/assets/images/seo/reservation-image.jpg.jpg',
+        url: '/assets/images/seo/reservation-image.jpg',
         width: 1200,
         height: 630,
         alt: 'Close-up view of a dinner gathering with several wine glasses and small dishes on a softly lit table. People are seated around the table, casually engaged in conversation, though their faces are out of focus, creating an intimate and relaxed atmosphere.',
@@ -38,7 +38,7 @@ export const generateBookingPageMetadata = (): Metadata => ({
     title: 'Book a Table | Dine Restaurant',
     description:
       'Reserve your table at Dine Restaurant. Experience exceptional dining in beautiful surroundings.',
-    images: ['/assets/images/seo/reservation-image.jpg.jpg'],
+    images: ['/assets/images/seo/reservation-image.jpg'],
   },
   robots: {
     index: true,
