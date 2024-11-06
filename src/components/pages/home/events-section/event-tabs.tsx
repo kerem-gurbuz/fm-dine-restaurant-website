@@ -21,7 +21,7 @@ export function EventTabs() {
           <TabsTrigger
             key={eventTab.value}
             value={eventTab.value}
-            className="text-preset-heading-sm group relative flex-shrink-0 uppercase opacity-50 transition-all duration-200 data-[state=active]:opacity-100 hover:opacity-100 md:w-[223px] lg:w-auto"
+            className="text-preset-heading-sm group relative flex-shrink-0 uppercase transition-all duration-200 data-[state=inactive]:font-normal data-[state=active]:text-dark-gray data-[state=inactive]:text-dark-gray/80 hover:text-dark-gray md:w-[223px] lg:w-auto"
           >
             {eventTab.label}
             <span
