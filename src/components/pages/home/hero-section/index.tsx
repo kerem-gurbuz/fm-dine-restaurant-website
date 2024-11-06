@@ -9,6 +9,7 @@ export function HeroSection() {
     <header
       id="hero-section"
       aria-labelledby="hero-heading"
+      role="banner"
       className="relative bg-black pb-[152px] pt-[232px] text-white md:pb-[216px] md:pt-[374px] lg:pb-[198px] lg:pt-[65px]"
     >
       <DynamicImage

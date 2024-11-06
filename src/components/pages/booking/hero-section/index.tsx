@@ -13,6 +13,7 @@ export function HeroSection({ onScrollToBooking }: HeroSectionProps) {
     <header
       id="hero-section"
       aria-labelledby="hero-heading"
+      role="banner"
       className="relative bg-black pb-[228px] pt-[56px] md:pb-[268px] xl:pb-[153px] xl:pt-[65px]"
     >
       <DynamicImage

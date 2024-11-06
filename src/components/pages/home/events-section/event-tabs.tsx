@@ -7,11 +7,7 @@ const DEFAULT_TAB = EVENT_TABS[0];
 
 export function EventTabs() {
   return (
-    <Tabs
-      aria-label="Event tabs"
-      className="relative z-10"
-      defaultValue={DEFAULT_TAB.value}
-    >
+    <Tabs className="relative z-10" defaultValue={DEFAULT_TAB.value}>
       <TabsList
         className={cn(
           'absolute z-20',
@@ -25,7 +21,7 @@ export function EventTabs() {
           <TabsTrigger
             key={eventTab.value}
             value={eventTab.value}
-            className="text-preset-heading-sm group relative flex-shrink-0 uppercase opacity-50 transition-all duration-200 hover:opacity-100 data-[state=active]:opacity-100 md:w-[223px] lg:w-auto"
+            className="text-preset-heading-sm group relative flex-shrink-0 uppercase opacity-50 transition-all duration-200 data-[state=active]:opacity-100 hover:opacity-100 md:w-[223px] lg:w-auto"
           >
             {eventTab.label}
             <span

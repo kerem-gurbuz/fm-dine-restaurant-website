@@ -5,6 +5,8 @@ export function EventsSection() {
   return (
     <section
       id="events-section"
+      aria-label="Events Section"
+      role="region"
       className="relative pb-[124px] pt-[80px] md:py-[120px] lg:py-[160px]"
     >
       <div className="container max-w-[1110px] px-6 md:px-[97.5px] xl:px-0">

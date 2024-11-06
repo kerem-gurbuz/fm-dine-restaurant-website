@@ -9,6 +9,7 @@ export function CtaSection() {
     <section
       id="cta-section"
       aria-labelledby="cta-heading"
+      role="region"
       className="relative pb-[80px] pt-[84px] md:pb-[64px] md:pt-[72px] lg:py-[88px]"
     >
       <DynamicImage
