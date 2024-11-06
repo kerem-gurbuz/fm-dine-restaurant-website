@@ -7,7 +7,6 @@ export default function NotFound() {
     <div
       id="not-found"
       aria-labelledby="not-found-heading"
-      role="region"
       className="flex min-h-screen flex-col items-center justify-center bg-cod-gray p-6 text-white"
     >
       <div className="max-w-lg space-y-6 text-center">
