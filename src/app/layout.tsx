@@ -11,7 +11,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className="scrollbar-thin scrollbar-thumb-beaver scrollbar-track-black"
+      className="scrollbar-thin scrollbar-track-cod-gray scrollbar-thumb-beaver"
     >
       <body
         className={`${league_spartan.variable} font-league-spartan antialiased`}
