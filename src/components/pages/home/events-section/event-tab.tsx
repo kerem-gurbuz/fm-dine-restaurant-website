@@ -41,12 +41,12 @@ export function EventTab({ value, event }: EventTabProps) {
             'text-center text-ebony-clay lg:text-left',
           )}
         >
-          <h3
+          <h2
             id={event.id + '-heading'}
             className="text-preset-heading-lg--mobile md:text-preset-heading-lg--tablet lg:text-preset-heading-lg--desktop mb-[13px] md:mb-[19px]"
           >
             {event.title}
-          </h3>
+          </h2>
           <p className="text-preset-body-base md:text-preset-body-lg mb-[27px] md:mb-[30px] md:h-[120px]">
             {event.description}
           </p>
