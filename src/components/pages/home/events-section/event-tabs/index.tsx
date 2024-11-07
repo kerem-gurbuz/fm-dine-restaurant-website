@@ -1,7 +1,7 @@
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { EVENT_TABS } from '@/config/constants/pages/home';
 import { cn } from '@/lib/utils';
-import { EventTab } from './event-tab';
+import { EVENT_TABS } from '../constants';
+import { EventTab } from '../event-tab';
 
 const DEFAULT_TAB = EVENT_TABS[0];
 

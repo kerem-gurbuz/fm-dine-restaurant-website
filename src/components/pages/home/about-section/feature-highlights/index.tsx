@@ -1,5 +1,5 @@
 import { cn } from '@/lib/utils';
-import { EnjoyablePlace, LocallySourced } from './features';
+import { EnjoyablePlace, LocallySourced } from '../features';
 
 type FeatureHighlightsProps = {
   className?: string;

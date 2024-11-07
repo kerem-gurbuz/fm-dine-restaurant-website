@@ -1,6 +1,6 @@
-import { MENU_HIGHLIGHTS } from '@/config/constants/pages/home';
 import { cn } from '@/lib/utils';
-import { MenuItem } from './menu-item';
+import { MENU_HIGHLIGHTS } from '../constants';
+import { MenuItem } from '../menu-item';
 
 type MenuHighlightsProps = {
   className?: string;

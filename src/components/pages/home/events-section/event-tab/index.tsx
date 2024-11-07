@@ -4,8 +4,8 @@ import { DynamicImage } from '@/components/common';
 import { Lines } from '@/components/common/patterns';
 import { Button } from '@/components/ui/button';
 import { TabsContent } from '@/components/ui/tabs';
-import type { Event, EventType } from '@/lib/types/pages/home';
 import { cn } from '@/lib/utils';
+import type { Event, EventType } from '../types';
 
 type EventTabProps = {
   value: EventType;

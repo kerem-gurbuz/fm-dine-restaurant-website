@@ -1,4 +1,8 @@
-import type { ImageSourceMap } from '@/lib/types/common';
+/* -------------------------------------------------------------------------- */
+/*                           Hero Section Constants                           */
+/* -------------------------------------------------------------------------- */
+
+import type { ImageSourceMap } from '@/lib/types';
 
 import bgDesktop from '/public/assets/images/booking/hero-bg-desktop@2x.jpg';
 import bgMobile from '/public/assets/images/booking/hero-bg-mobile@2x.jpg';
@@ -7,7 +11,7 @@ import bgTablet from '/public/assets/images/booking/hero-bg-tablet@2x.jpg';
 const imageAlt =
   'Plate with avocado and tomato on toast, sprinkled with black pepper, on a wooden table background.';
 
-export const HERO_SECTION_BACKGROUND_IMAGE_CONFIG: ImageSourceMap = {
+export const BACKGROUND_IMAGE_CONFIG: ImageSourceMap = {
   mobile: {
     src: bgMobile,
     alt: imageAlt,

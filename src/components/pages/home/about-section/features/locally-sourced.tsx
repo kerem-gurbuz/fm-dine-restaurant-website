@@ -1,7 +1,7 @@
 import { DynamicImage, MultiLineTitle } from '@/components/common';
 import { Divider, Lines } from '@/components/common/patterns';
-import { RESTAURANT_FEATURES } from '@/config/constants/pages/home';
 import { cn } from '@/lib/utils';
+import { RESTAURANT_FEATURES } from '../constants';
 
 const locallySourced = RESTAURANT_FEATURES['locally-sourced'];
 

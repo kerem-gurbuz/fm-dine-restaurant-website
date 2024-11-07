@@ -1,4 +1,4 @@
-import type { ImageSourceMap, ImageSourceType } from '@/lib/types/common';
+import type { ImageSourceMap, ImageSourceType } from '@/lib/types';
 import { ResponsiveImage } from './responsive-image';
 
 /*

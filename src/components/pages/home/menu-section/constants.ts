@@ -1,4 +1,8 @@
-import type { MenuItem } from '@/lib/types/pages/home';
+/* -------------------------------------------------------------------------- */
+/*                           Menu Section Constants                           */
+/* -------------------------------------------------------------------------- */
+
+import type { MenuItem } from './types';
 
 import salmonDesktopTablet from '/public/assets/images/homepage/salmon-desktop-tablet@2x.jpg';
 import salmonMobile from '/public/assets/images/homepage/salmon-mobile@2x.jpg';

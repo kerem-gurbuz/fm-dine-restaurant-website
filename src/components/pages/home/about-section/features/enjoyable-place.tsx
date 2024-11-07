@@ -1,7 +1,7 @@
 import { DynamicImage, MultiLineTitle } from '@/components/common';
 import { Divider } from '@/components/common/patterns';
-import { RESTAURANT_FEATURES } from '@/config/constants/pages/home';
 import { cn } from '@/lib/utils';
+import { RESTAURANT_FEATURES } from '../constants';
 
 const enjoyablePlace = RESTAURANT_FEATURES['enjoyable-place'];
 

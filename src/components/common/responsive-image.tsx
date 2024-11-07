@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import type { ImageSource } from '@/lib/types/common';
+import type { ImageSource } from '@/lib/types';
 import { cn } from '@/lib/utils';
 
 type ResponsiveImageProps = {

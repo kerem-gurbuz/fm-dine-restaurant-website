@@ -1,4 +1,4 @@
-import type { BookingFormData, ToastMessage } from '../../types';
+import type { BookingFormData, ToastMessage } from '@/features/booking/types';
 
 /**
  * Generates a success toast message for a successful booking reservation.

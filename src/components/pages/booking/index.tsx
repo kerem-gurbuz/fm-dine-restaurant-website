@@ -1,8 +1,16 @@
 'use client';
 
-/* 
-  Notes:
+import { useRef } from 'react';
 
+import { CurveBottomRight, Lines } from '@/components/common/patterns';
+import { BookingForm } from '@/features/booking/components';
+import { useScrollIntoView } from '@/lib/hooks';
+import { cn } from '@/lib/utils';
+import { HeroSection } from './hero-section';
+
+/* 
+  Notes
+  ------------------------------------------------------------------------
   This component was extracted from the original BookingPage to enable server-side rendering. It wraps all client-side functionality (useRef, scroll behavior, interactive elements) allowing the parent page component to be a server component.
  
   Why this pattern?
@@ -13,14 +21,6 @@
  
   Reference: https://nextjs.org/docs/app/building-your-application/rendering/composition-patterns
  */
-
-import { useRef } from 'react';
-
-import { CurveBottomRight, Lines } from '@/components/common/patterns';
-import { BookingForm } from '@/features/booking/components';
-import { useScrollIntoView } from '@/lib/hooks';
-import { cn } from '@/lib/utils';
-import { HeroSection } from '../hero-section';
 
 export function PageContent() {
   const scrollToRef = useScrollIntoView();

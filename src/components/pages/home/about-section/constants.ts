@@ -1,4 +1,8 @@
-import type { Feature, FeatureMap } from '@/lib/types/pages/home';
+/* -------------------------------------------------------------------------- */
+/*                           About Section Constants                          */
+/* -------------------------------------------------------------------------- */
+
+import type { Feature, FeatureMap } from './types';
 
 import enjoyablePlaceDesktop from '/public/assets/images/homepage/enjoyable-place-desktop@2x.jpg';
 import enjoyablePlaceMobile from '/public/assets/images/homepage/enjoyable-place-mobile@2x.jpg';
@@ -9,7 +13,7 @@ import locallySourcedMobile from '/public/assets/images/homepage/locally-sourced
 import locallySourcedTablet from '/public/assets/images/homepage/locally-sourced-tablet@2x.jpg';
 
 /* 
-  Enjoyable Place
+  Enjoyable Place Feature
   ------------------------------------------------------------------------
  */
 const enjoyablePlaceImageAlt =
@@ -47,7 +51,7 @@ const enjoyablePlace: Feature = {
 };
 
 /* 
-  Locally Sourced
+  Locally Sourced Feature
   ------------------------------------------------------------------------
  */
 const locallySourcedImageAlt =

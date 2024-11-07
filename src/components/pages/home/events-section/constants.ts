@@ -1,4 +1,8 @@
-import type { Event, EventTab } from '@/lib/types/pages/home';
+/* -------------------------------------------------------------------------- */
+/*                          Events Section Constants                          */
+/* -------------------------------------------------------------------------- */
+
+import type { Event, EventTab } from './types';
 
 import familyGatheringDesktop from '/public/assets/images/homepage/family-gathering-desktop@2x.jpg';
 import familyGatheringMobile from '/public/assets/images/homepage/family-gathering-mobile@2x.jpg';

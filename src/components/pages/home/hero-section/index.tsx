@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 import { DineLogo, DynamicImage } from '@/components/common';
 import { Button } from '@/components/ui/button';
-import { HERO_SECTION_BACKGROUND_IMAGE_CONFIG } from '@/config/constants/pages/home';
+import { BACKGROUND_IMAGE_CONFIG } from './constants';
 
 export function HeroSection() {
   return (
@@ -15,7 +15,7 @@ export function HeroSection() {
       <DynamicImage
         id="hero-background-image"
         className="absolute inset-0"
-        imageConfig={HERO_SECTION_BACKGROUND_IMAGE_CONFIG}
+        imageConfig={BACKGROUND_IMAGE_CONFIG}
         placeholder="blur"
         quality={85}
         priority={true}

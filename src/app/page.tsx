@@ -5,8 +5,8 @@ import {
   HeroSection,
   MenuSection,
 } from '@/components/pages/home';
-import { generateHomePageMetadata } from '@/seo/metadata';
-import { generateHomePageSchema } from '@/seo/schemas';
+import { generateHomePageMetadata } from '@/config/seo/metadata';
+import { generateHomePageSchema } from '@/config/seo/schemas';
 
 export const metadata = generateHomePageMetadata();
 
