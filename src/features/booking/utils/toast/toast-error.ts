@@ -1,4 +1,4 @@
-import type { BookingFormData, ToastMessage } from '../../types';
+import type { BookingFormData, ToastMessage } from '@/features/booking/types';
 
 /**
  * Type guard to check if an error object is an API error

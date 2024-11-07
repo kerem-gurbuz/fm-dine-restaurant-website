@@ -23,13 +23,17 @@ import {
 } from '@/components/ui/select';
 import { useToast } from '@/lib/hooks';
 import { cn } from '@/lib/utils';
-import { MAX_GUESTS } from '../constants';
-import { bookingFormSchema } from '../schemas';
-import type { BookingFormData } from '../types';
+
+import { MAX_GUESTS } from '@/features/booking/constants';
+import { bookingFormSchema } from '@/features/booking/schemas';
+import type { BookingFormData } from '@/features/booking/types';
 import {
   generateBookingErrorMessage,
   generateBookingSuccessMessage,
-} from '../utils';
+} from '@/features/booking/utils';
+
+// TODO: Submit data to API
+// TODO: Implement error logging and reporting
 
 type BookingFormProps = {
   className?: string;
@@ -53,18 +57,15 @@ export function BookingForm({ className }: BookingFormProps) {
 
   const onSubmit = async (data: BookingFormData) => {
     try {
-      // TODO: Submit data to API
       console.log('Form data:', data);
-
       // Simulate API call
       await new Promise((resolve) => setTimeout(resolve, 2000));
-
+      // Display success toast
       toast(generateBookingSuccessMessage(data));
       form.reset();
     } catch (error) {
-      // TODO: Implement error logging and reporting (e.g. Sentry)
       console.error('Error submitting form:', error);
-
+      // Display error toast
       toast(generateBookingErrorMessage(error, data));
     }
   };

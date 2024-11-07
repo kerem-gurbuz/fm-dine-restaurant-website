@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 import { DynamicImage } from '@/components/common';
 import { Button } from '@/components/ui/button';
-import { CTA_SECTION_BACKGROUND_IMAGE_CONFIG } from '@/config/constants/pages/home';
+import { BACKGROUND_IMAGE_CONFIG } from './constants';
 
 export function CtaSection() {
   return (
@@ -15,7 +15,7 @@ export function CtaSection() {
       <DynamicImage
         id="cta-background-image"
         className="absolute inset-0"
-        imageConfig={CTA_SECTION_BACKGROUND_IMAGE_CONFIG}
+        imageConfig={BACKGROUND_IMAGE_CONFIG}
         placeholder="blur"
         quality={75}
         priority={false}

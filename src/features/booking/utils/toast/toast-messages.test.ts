@@ -1,4 +1,4 @@
-import type { BookingFormData } from '../../types';
+import type { BookingFormData } from '@/features/booking/types';
 import { generateBookingErrorMessage } from './toast-error';
 import { ConflictError, ValidationError } from './toast-errors';
 import { generateBookingSuccessMessage } from './toast-success';

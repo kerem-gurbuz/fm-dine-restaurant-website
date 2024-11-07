@@ -1,6 +1,6 @@
 import { DynamicImage } from '@/components/common';
-import type { MenuItem } from '@/lib/types/pages/home';
 import { cn } from '@/lib/utils';
+import type { MenuItem } from '../types';
 
 type MenuItemProps = {
   className?: string;

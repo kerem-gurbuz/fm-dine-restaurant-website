@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 import { DineLogo } from '@/components/common';
-import { FOOTER_CONTACT, FOOTER_HOURS } from '@/config/constants/layout';
+import { FOOTER_CONTACT, FOOTER_HOURS } from './constants';
 
 export function Footer() {
   const { address, phone } = FOOTER_CONTACT;
@@ -23,16 +23,16 @@ export function Footer() {
           </nav>
           <div className="text-preset-body-sm flex flex-1 flex-col gap-8 text-center text-white md:mt-[2px] md:items-start md:text-left lg:flex-row lg:justify-between">
             {/* Contact Information */}
-            <div className="w-full max-w-[244px]">
+            <div className="w-full max-w-[244px] uppercase">
               <p>
-                {address.city}, {address.region}
+                {address.street}, {address.locality}
               </p>
-              <p>{address.country}</p>
+              <p>{address.region}</p>
               <p>{phone}</p>
             </div>
             {/* Opening Hours */}
-            <div className="flex-1">
-              <p className="uppercase">Open times</p>
+            <div className="flex-1 uppercase">
+              <p>Open Times</p>
               <p>
                 {weekdays.days}: {weekdays.hours}
               </p>

@@ -1,2 +1,2 @@
-export type { ToastMessage } from './toast-messages.types';
-export type { BookingFormData } from './booking-form-data.types';
+export type { ToastMessage } from './toast-messages';
+export type { BookingFormData } from './booking-form-data';

@@ -2,4 +2,4 @@ export type {
   ImageSource,
   ImageSourceMap,
   ImageSourceType,
-} from './image-config.types';
+} from './image-config';

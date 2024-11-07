@@ -36,9 +36,15 @@ The project aims to create a fully functional restaurant website where users can
 
 ### Screenshot
 
+#### Homepage:
+
 ![Dine Restaurant Homepage](/public/screenshots/homepage.webp)
 
+#### Booking Page:
+
 ![Dine Restaurant Booking Page](/public/screenshots/booking-page.webp)
+
+#### Booking Form Validation:
 
 ![Dine Restaurant Booking Form Validation](/public/screenshots/booking-page-active.webp)
 
@@ -58,39 +64,52 @@ The project aims to create a fully functional restaurant website where users can
 src/
 ├── app/                    # Next.js app directory
 │   ├── booking/            # Booking page route
-│   └── page.tsx            # Homepage route
+│   ├── error.tsx           # Error page
+│   ├── favicon.ico         # Favicon
+│   ├── global-error.tsx    # Global error page
+│   ├── layout.tsx          # Root layout
+│   ├── manifest.ts         # Web app manifest
+│   ├── not-found.tsx       # 404 page
+│   ├── page.tsx            # Homepage route
+│   ├── robots.ts           # Robots.txt configuration
+│   └── sitemap.ts          # Sitemap configuration
 ├── components/             # Reusable components
-│   ├── common/             # Shared components
-│   ├── layout/             # Layout components
+│   ├── common/             # Shared components (e.g., icons, patterns)
+│   ├── layout/             # Layout components (e.g., footer)
 │   ├── pages/              # Page-specific components
+│   │   ├── booking/        # Booking page components
+│   │   └── home/           # Homepage components (sections like menu, events, etc.)
 │   └── ui/                 # UI components (shadcn)
 ├── config/                 # Configuration files
-│   ├── constants/          # Constants and static data
+│   ├── constants/          # Global constants
+│   ├── seo/                # SEO-related configurations
+│   │   ├── metadata/       # Page metadata
+│   │   └── schemas/        # SEO schemas
 │   ├── env.ts              # Environment variables
 │   └── site.ts             # Site-wide configuration
 ├── features/               # Feature-based modules
 │   └── booking/            # Booking feature
-│       ├── components/     # Booking components
+│       ├── components/     # Booking components (e.g., booking-form)
+│       ├── constants/      # Booking-specific constants
 │       ├── schemas/        # Validation schemas
-│       └── utils/          # Utility functions
-├── lib/                    # Shared utilities
-│   ├── hooks/              # Custom hooks
-│   ├── styles/             # Global styles
-│   └── utils/              # Utility functions
-└── seo/                    # SEO-related configurations
-    ├── metadata/           # Page metadata
-    └── schemas/            # SEO schemas
+│       ├── types/          # Types for booking feature
+│       └── utils/          # Utility functions for booking
+└── lib/                    # Shared utilities
+    ├── hooks/              # Custom hooks
+    ├── styles/             # Global styles
+    ├── types/              # Shared types
+    └── utils/              # Utility functions
 ```
 
 ### What I learned
 
-- **Next.js App Router**: Implemented modern routing patterns and page organization using the Next.js 13+ app directory structure
+- **Next.js App Router**: Implemented modern routing patterns and page organization using the Next.js 14+ app directory structure
 - **Type Safety**: Enhanced code reliability using TypeScript throughout the project
 - **Form Validation**: Created a robust form validation system using Zod and React Hook Form
 - **Component Architecture**: Developed a scalable component structure separating concerns between common, layout, and page-specific components
 - **SEO Optimization**: Implemented comprehensive JSON-LD schemas and metadata for better search engine visibility
 
-Schema generation for the homepage and booking page:
+Example schema generation:
 
 ```typescript
 import type { Graph } from 'schema-dts';
@@ -128,7 +147,6 @@ Future improvements and features to consider:
 - Integration with a backend reservation system
 - Real-time availability checking
 - User authentication for managing reservations
-- [Resend](https://www.resend.com/) integration for sending reservation details email to users
 - Enhanced accessibility features
 - Performance optimization for images and animations
 - Integration with a CMS for menu management
